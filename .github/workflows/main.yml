@@ -67,7 +67,7 @@ jobs:
 
     - name: 'Publish Libraries'
       if: success()
-      uses: actions/upload-artifact@v2.2.4
+      uses: actions/upload-artifact@v4
       with:
         name: libvisca-ip-${{env.MY_GIT_HASH}}
         path: publish-lib/*
@@ -75,7 +75,7 @@ jobs:
 
     - name: 'Publish Examples'
       if: success()
-      uses: actions/upload-artifact@v2.2.4
+      uses: actions/upload-artifact@v4
       with:
         name: libvisca-ip-examples-${{env.MY_GIT_HASH}}
         path: publish-ex/*
